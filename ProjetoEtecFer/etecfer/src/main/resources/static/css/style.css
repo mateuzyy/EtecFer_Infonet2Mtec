@@ -1,0 +1,293 @@
+/* =============================================
+   Paleta ETEC — Institucional
+   --etec-red:      #C8102E  (vermelho ETEC)
+   --etec-dark-red: #9B0C22  (hover/ênfase)
+   --etec-navy:     #1A2238  (títulos / cabeçalhos de tabela)
+   --etec-gray:     #4A5568  (texto secundário)
+   --etec-light:    #F2F4F7  (fundo geral)
+   --etec-white:    #FFFFFF
+   ============================================= */
+
+   *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    background-color: #F2F4F7;
+    color: #1A2238;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ── Container central (formulários / menu) ── */
+
+.container {
+    background: #FFFFFF;
+    padding: 40px 48px;
+    border-radius: 4px;
+    border-top: 4px solid #C8102E;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    text-align: center;
+    width: 420px;
+}
+
+h1 {
+    margin-bottom: 28px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1A2238;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+/* ── Menu ── */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    background: #C8102E;
+    color: #FFFFFF;
+    padding: 13px 16px;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.menu a:hover {
+    background: #9B0C22;
+    box-shadow: 0 3px 8px rgba(155, 12, 34, 0.25);
+}
+
+/* ── Formulários ── */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.campo label {
+    margin-bottom: 5px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #4A5568;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.campo input {
+    padding: 11px 14px;
+    border: 1px solid #CBD2DC;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    background: #FAFBFC;
+    color: #1A2238;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo input:focus {
+    border-color: #C8102E;
+    box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.12);
+    background: #FFFFFF;
+}
+
+/* ── Botões ── */
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    background: #C8102E;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    background: #9B0C22;
+    box-shadow: 0 3px 8px rgba(155, 12, 34, 0.25);
+}
+
+.btn-voltar {
+    flex: 1;
+    padding: 12px;
+    background: transparent;
+    color: #4A5568;
+    border: 1px solid #CBD2DC;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn-voltar:hover {
+    background: #F2F4F7;
+    border-color: #4A5568;
+    color: #1A2238;
+}
+
+/* ── Container de listagem ── */
+
+.container-lista {
+    width: 92%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #FFFFFF;
+    padding: 32px 36px;
+    border-radius: 4px;
+    border-top: 4px solid #C8102E;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #E4E8EE;
+}
+
+.topo h1 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.btn-novo {
+    background: #1A2238;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: background 0.2s;
+}
+
+.btn-novo:hover {
+    background: #C8102E;
+}
+
+/* ── Tabela ── */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+table thead {
+    background: #1A2238;
+    color: #FFFFFF;
+}
+
+table th {
+    padding: 13px 15px;
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+table td {
+    padding: 13px 15px;
+    text-align: center;
+    border-bottom: 1px solid #E4E8EE;
+    color: #1A2238;
+}
+
+table tbody tr:nth-child(even) {
+    background: #F8F9FB;
+}
+
+table tbody tr:hover {
+    background: #FDF0F2;
+}
+
+/* ── Ações da tabela ── */
+
+.btn-editar {
+    background: transparent;
+    color: #C8102E;
+    border: 1px solid #C8102E;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 3px;
+    margin-right: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-editar:hover {
+    background: #C8102E;
+    color: #FFFFFF;
+}
+
+.btn-excluir {
+    background: transparent;
+    color: #9B0C22;
+    border: 1px solid #9B0C22;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-excluir:hover {
+    background: #9B0C22;
+    color: #FFFFFF;
+}
+
+/* ── Rodapé de listagem ── */
+
+.voltar {
+    margin-top: 24px;
+    text-align: center;
+}

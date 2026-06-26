@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Alunos</title>
+    <title>Lista de Cursos</title>
 
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
@@ -13,10 +13,10 @@
     <div class="container-lista">
 
         <div class="topo">
-            <h1>Lista de Alunos</h1>
+            <h1>Lista de Cursos</h1>
 
-            <a href="/alunos/criar" class="btn-novo">
-                + Novo Aluno
+            <a href="/cursos/criar" class="btn-novo">
+                + Novo Curso
             </a>
         </div>
 
@@ -25,28 +25,24 @@
             <thead>
                 <tr>
                     <th>Nome</th>
-                    <th>E-mail</th>
-                    <th>Telefone</th>
-                    <th>RA</th>
-                    <th>CPF</th>
+                    <th>Período</th>
+                    <th>Carga Horária</th>
                     <th>Ações</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr th:each="aluno : ${alunos}">
-                    <td th:text="${aluno.nomeAluno}"></td>
-                    <td th:text="${aluno.emailAluno}"></td>
-                    <td th:text="${aluno.telefoneAluno}"></td>
-                    <td th:text="${aluno.raAluno}"></td>
-                    <td th:text="${aluno.cpfAluno}"></td>
+                <tr th:each="curso : ${cursos}">
+                    <td th:text="${curso.nomeCurso}"></td>
+                    <td th:text="${curso.periodoCurso}"></td>
+                    <td th:text="${curso.chCurso}"></td>
 
                     <td>
-                        <a th:href="@{/alunos/editar/{id}(id=${aluno.idAluno})}" class="btn-editar">
+                        <a th:href="@{/cursos/editar/{id}(id=${curso.idCurso})}" class="btn-editar">
                             Editar
                         </a>
 
-                        <a th:href="@{/alunos/excluir/{id}(id=${aluno.idAluno})}" class="btn-excluir">
+                        <a th:href="@{/cursos/excluir/{id}(id=${curso.idCurso})}" class="btn-excluir">
                             Excluir
                         </a>
                     </td>

@@ -1,43 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Alunos</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
 
-    <h1 style="text-align: center;">Cadastrar aluno</h1>
+    <div class="container">
 
-    <form th:action="@{/alunos/salvar}" method="post" th:object="${aluno}">
+        <h1>Cadastrar Aluno</h1>
 
-        <input type="hidden" th:field="*{idAluno}" />
-        <br>
+        <form th:action="@{/alunos/salvar}" method="post" th:object="${aluno}">
 
-        <label>Nome:</label>
-        <input type="text" th:field="*{nomeAluno}" />
-        <br>
+            <input type="hidden" th:field="*{idAluno}"/>
 
-        <label>E-mail:</label>
-        <input type="text" th:field="*{emailAluno}" />
-        <br>
+            <div class="campo">
+                <label>Nome</label>
+                <input type="text" th:field="*{nomeAluno}">
+            </div>
 
-        <label>Telefone:</label>
-        <input type="text" th:field="*{telefoneAluno}" />
-        <br>
+            <div class="campo">
+                <label>E-mail</label>
+                <input type="email" th:field="*{emailAluno}">
+            </div>
 
-        <label>RA:</label>
-        <input type="text" th:field="*{raAluno}" />
-        <br>
+            <div class="campo">
+                <label>Telefone</label>
+                <input type="text" th:field="*{telefoneAluno}">
+            </div>
 
-        <label>CPF:</label>
-        <input type="text" th:field="*{cpfAluno}" />
-        <br>
+            <div class="campo">
+                <label>RA</label>
+                <input type="text" th:field="*{raAluno}">
+            </div>
 
-        <input type="submit" value="Salvar" />
+            <div class="campo">
+                <label>CPF</label>
+                <input type="text" th:field="*{cpfAluno}">
+            </div>
 
-    </form>
+            <div class="botoes">
+                <input type="submit" value="Salvar" class="btn">
+
+                <a href="/alunos/listar" class="btn-voltar">
+                    Voltar
+                </a>
+            </div>
+
+        </form>
+
+    </div>
 
 </body>
 </html>
